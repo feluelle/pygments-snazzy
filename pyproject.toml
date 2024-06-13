@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "pygments-snazzy"
+version = "0.1.0"
+description = ""
+authors = ["feluelle <felix.uellendall@astronomer.io>"]
+readme = "README.md"
+packages = [
+    { include = "snazzy_style.py" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pygments = "^2.18.0"
+
+[tool.poetry.plugins."pygments.styles"]
+snazzy-style = "snazzy_style:SnazzyStyle"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
